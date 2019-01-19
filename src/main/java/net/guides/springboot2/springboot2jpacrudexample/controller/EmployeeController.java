@@ -27,11 +27,13 @@ public class EmployeeController {
 	@Autowired
 	private EmployeeRepository employeeRepository;
 
+	// selectLink-getAllDetails
 	@GetMapping("/employees")
 	public List<Employee> getAllEmployees() {
 		return employeeRepository.findAll();
 	}
 
+	// selectLink-getDetailById
 	@GetMapping("/employees/{id}")
 	public ResponseEntity<Employee> getEmployeeById(@PathVariable(value = "id") Long employeeId)
 			throws ResourceNotFoundException {
@@ -40,11 +42,13 @@ public class EmployeeController {
 		return ResponseEntity.ok().body(employee);
 	}
 
+	// insertLink-saveDataByDetails
 	@PostMapping("/employees")
 	public Employee createEmployee(@Valid @RequestBody Employee employee) {
 		return employeeRepository.save(employee);
 	}
 
+	// updateLink-setDataByIdDetails
 	@PutMapping("/employees/{id}")
 	public ResponseEntity<Employee> updateEmployee(@PathVariable(value = "id") Long employeeId,
 			@Valid @RequestBody Employee employeeDetails) throws ResourceNotFoundException {
@@ -63,6 +67,7 @@ public class EmployeeController {
 		return ResponseEntity.ok(updatedEmployee);
 	}
 
+	// deleteLink-deleteDataById
 	@DeleteMapping("/employees/{id}")
 	public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Long employeeId)
 			throws ResourceNotFoundException {

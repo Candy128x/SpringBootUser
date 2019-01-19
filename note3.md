@@ -1,11 +1,8 @@
-# SpringBoot User
+# SpringBoot
 190119
-
-~ CURD API
-
 ---
 
 ## Tech
-- SpringBoot
-- Java
-- SQL Database
+- Framework: SpringBoot
+- Programming Lang:Java
+- Database: MySQL
