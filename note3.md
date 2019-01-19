@@ -2,7 +2,7 @@
 190119
 ---
 
-- Tech
-- - SpringBoot
-- - Java
-- - SQL Database
+## Tech
+- SpringBoot
+- Java
+- SQL Database
